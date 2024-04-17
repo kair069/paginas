@@ -1,0 +1,492 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Monto de Bono para Analista de Crédito</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            background-color: white;
+            /* Cambiado a blanco */
+            color: rgb(0, 37, 89);
+            /* Cambiado a azul oscuro */
+        }
+
+        .small-text {
+            font-size: 14px;
+        }
+
+        .sum {
+            color: rgb(207, 43, 51);
+            /* Cambiado a verde */
+        }
+
+        .subtract {
+            color: rgb(255, 181, 67);
+            /* Cambiado a naranja */
+        }
+
+        .tabs {
+            background-color: rgb(255, 255, 255);
+            /* Cambiado a blanco */
+            border-bottom: 1px solid rgb(0, 37, 89);
+        }
+
+        .tabs a {
+            color: rgb(0, 37, 89);
+            /* Cambiado a azul oscuro */
+        }
+
+        .tabs .tab a:hover,
+        .tabs .tab a.active {
+            background-color: rgb(0, 37, 89);
+            color: rgb(255, 255, 255);
+            /* Cambiado a blanco */
+        }
+
+        .tabs .indicator {
+            background-color: white;
+        }
+
+        table {
+            background-color: rgb(255, 255, 255);
+            /* Cambiado a blanco */
+            color: rgb(0, 37, 89);
+            /* Cambiado a azul oscuro */
+        }
+
+        table.striped tbody tr:nth-child(odd) {
+            background-color: rgba(0, 37, 89, 0.1);
+            /* Cambiado a azul oscuro */
+        }
+
+        .comment {
+            position: relative;
+            font-size: 12px;
+            /* Tamaño del comentario */
+            color: rgb(30, 99, 196);
+            /* Cambiado a azul oscuro */
+            display: block;
+            /* Hacemos que sea un bloque para ocupar espacio */
+            text-align: right;
+            /* Alineamos el texto a la derecha */
+        }
+
+        /* .equation {
+      font-family: Arial, sans-serif;
+      font-size: 16px;
+      color: #333;
+    }
+
+    .equation-container {
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      background-color: #f9f9f9;
+      margin-bottom: 10px;
+    } */
+        .center-align {
+            text-align: center;
+            font-family: Arial, sans-serif;
+            font-size: small;
+        }
+
+        .saludo {
+            font-size: 18px;
+            font-weight: bold;
+            color: #0f0101;
+            font-family: Arial, sans-serif;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+        <h4 class="center-align saludo">¡Hola EHUANACU             , querido Analista de créditos de la Caja Arequipa! (
+            ͡ᵔ ͜ʖ ͡ᵔ)👍</h4>
+
+        <div class="row">
+            <div class="col s12">
+                <p class="small-text center-align">¡Espero que estés bien! Hoy te proporcionaré detalles sobre tu Bono Variable:
+                    Como <strong style="color:rgb(0, 37, 89)">Analista Nuevo</strong> de la categoría
+                    <strong style="color:rgb(0, 37, 89)">!AVAN</strong>, estás a punto de descubrir
+                    tu potencial de
+                    bonificación.
+                </p>
+            </div>
+        </div>
+
+        <!-- TARJETA -->
+        <!-- Tarjeta con mensaje -->
+        <div class="fixed-action-btn" style="top: 20px; right: 20px;">
+            <a class="btn blue-grey lighten-2" style="width: 300px; height: 50px; line-height: 50px; font-size: 10px; color: #fff;" onclick="this.style.display='none';">
+                Por favor, desliza o selecciona un bono
+            </a>
+            <ul>
+                <li>
+                    <div class="card blue-grey lighten-2" style="width: 300px; opacity: 0; transition: opacity 0.5s;">
+                        <div class="card-content">
+                            <span class="card-title" style="font-size: 12px;">Por favor, desliza o selecciona un bono:</span>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+        </div>
+        
+        
+
+        <ul class="tabs" style="background-color: rgb(255, 255, 255); border-bottom: 1px solid rgb(0, 37, 89);">
+            <!-- <ul class="tabs" style="background-color: rgb(255, 255, 255);"> -->
+            <li class="tab col s6"><a href="#bono-1">Bono Cartera</a></li>
+            <li class="tab col s6"><a href="#bono-2">Bono MicroEmpresa</a></li>
+            <li class="tab col s6"><a href="#bono-3">Bono Clientes</a></li>
+            <li class="tab col s6"><a href="#bono-4">Bono Retencion</a></li>
+            <li class="tab col s6"><a href="#bono-5">Bono Cartera al Dia</a></li>
+        </ul>
+
+        <div class="row">
+            <div class="col s12">
+                <div id="bono-1">
+                    <h5 class="center-align">Detalles del Bono Cartera</h5>
+                    <table class="striped">
+                        <thead>
+                            <tr>
+                                <th>Descripción</th>
+                                <th>Monto</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Tu Monto de Cartera Actual</td>
+                                <td>S/. 1,226,166.11</td>
+                            </tr>
+
+                            <tr>
+                                <td>Tu Monto de Cartera Inicial</td>
+                                <td> S/. 1,277,079.18</td>
+                            </tr>
+
+                            <tr>
+                                <td>Tu Crecimiento de Cartera <span class="comment">Este es la diferencia entre tu Monto
+                                        Actual y el Monto Inicial</span></td>
+                                <td>= S/. -50,913.07</td>
+                            </tr>
+
+                            <tr>
+                                <td>Crecimiento Minimo para <br>Comisionar Como <strong
+                                        style="color: rgb(81, 216, 198);font-size: medium;">Analista Nuevo</strong> y <strong
+                                        style="color: rgb(81, 216, 198);font-size: medium;">AVAN</strong>
+                                    <br>
+                                    <span class="comment">Esta es la Meta a la que debes llegar con tu crecimiento
+                                        cartera para recibir el bono</span>
+                                </td>
+                                <td class="sum">Meta Minima S/. 27,000.00</td>
+                            </tr>
+
+                            <tr>
+                                <td>Porcentaje <br>de Crecimiento <strong <span class="comment"></span>
+                                </td>
+                                <td>(S/.-50,913.07 / S/.27,000.00 ) x 100 = 0.0 %
+                                </td>
+                            </tr>
+
+
+
+                            <tr>
+                                <td>Tu Crecimiento de Cartera <br> ha excedido La Meta Mínima <br> en:</td>
+                                <!-- <td>La cantidad que tu cartera <br> ha crecido por encima <br> del  Crecimiento Mínimo <br> requerido para comisionar es:</td> -->
+                                <td class="sum">Excedente S/. 0.00</td>
+                            </tr>
+                            <tr>
+                                <td>Bono Por <br>Cumplimiento del Minimo:<span class="comment">Recibes S/.
+                                        0 por <br> alcanzar el la meta mínima <br> de S/
+                                        27,000.00.</span></td>
+                                <td>S/. 0</td>
+                            </tr>
+                            <tr>
+                                <td>Bono plus:<span class="comment">Bono Plus Generado del Porcentaje de Crecimiento de
+                                        Cartera que supera atu meta : </span>
+                                    <span class="comment"
+                                        style="font-size:larger ;color: black ;background-color: red;">*....Porcentaje
+                                        = 0.0
+                                        %</span>
+                                    <span class="comment">Entonces Te Corresponde Recibir
+                                        (0.0%) del Excedente : </span>
+                                </td>
+
+                                <td>(0.0% )x S/. 0.00 = S/.
+                                    0.0</td>
+                            </tr>
+
+                            <tr style="background-color:  rgba(189, 232, 89, 0.5);">
+                                <td><strong>Bono Total</strong></td>
+                                <td><strong>S/. 0 + S/. 0.0 = S/.
+                                        0.0</strong></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <div id="bono-2">
+                    <h5 class="center-align">Detalles del Bono MicroEmpresa</h5>
+                    <table class="striped">
+                        <thead>
+                            <tr>
+                                <th>Descripción</th>
+                                <th>Monto</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Tu Monto Total de Desembolsos es :</td>
+                                <td>S/. 61,100.00 </td>
+                            </tr>
+                            <tr>
+                                <td>Tu Monto de Desemebolsos Micro es:</td>
+                                <td>S/. 54,100.00</td>
+                            </tr>
+
+                            <tr>
+                                <td>Tu Porcentaje Minimo para Comisionar <br> como <strong
+                                        style="color: red;font-size: medium;">Analista Nuevo</strong> y <strong
+                                        style="color: red;font-size: medium;">AVAN</strong> <br>
+                                    <span class="comment">Esta es el Porcentaje al que debes llegar para recibir el
+                                        bono</span>
+                                </td>
+                                <td class="sum">Porcentaje Minimo: 60.0 %</td>
+                            </tr>
+                            <tr>
+                                <td>Tu porcentaje de tus Desembolsos que te Corresponde es :</td>
+                                <!-- <td>La cantidad que tu cartera <br> ha crecido por encima <br> del  Crecimiento Mínimo <br> requerido para comisionar es:</td> -->
+                                <td class="sum">S/. 54,100.00 / S/. 61,100.00 * 100
+                                    = 88.54 %</td>
+                            </tr>
+                            <tr>
+                                <td>Bono Por <br>Cumplimiento del Minimo:<span class="comment"
+                                        style="font-size:small ;color: black ;background-color: yellow;">Tu
+                                        88.54% si supero a
+                                        60.0%
+                                    </span></td>
+                                <td>S/. 0.0</td>
+                            </tr>
+
+
+                            <tr style="background-color:  rgba(231, 241, 184, 0.5);">
+                                <td><strong>Analisis:</strong></td>
+                                <td><strong>superaste el % minimo para comisionar ,Sí te corresponde el bono</strong></td>
+                            </tr>
+                            <tr style="background-color:  rgba(189, 232, 89, 0.5);">
+                                <td><strong>Explicacion:</strong></td>
+                                <td><strong>S/. 54,100.00 corresponden al 88.54% de
+                                        tus Desembolsos</strong></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+
+                <div id="bono-3">
+                    <h5 class="center-align">Detalles del Bono CLientes</h5>
+                    <table class="striped">
+                        <thead>
+                            <tr>
+                                <th>Descripción</th>
+                                <th>Monto</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Tu cantidad de clientes nuevos es :</td>
+                                <td> 3 CLT </td>
+                            </tr>
+                            <tr>
+                                <td>la meta de clientes nuevos que hay que superar es :</td>
+                                <td> 6 CLT</td>
+                            </tr>
+                            <tr>
+                                <td>Como 3 es menor que 6 :</td>
+                                <td> No superaste</td>
+                            </tr>
+                            <tr>
+                                <td>Diferencian de Cantidad de Clientes Nuevos y tu Meta de Clientes es: :</td>
+                                <td>Diferencia = 3 CLT - 6 CLT = (-3)
+                                    CLT</td>
+                            </tr>
+                            <tr>
+                                <td>Tu Bonificacion por Cumplimiento es :</td>
+                                <td>S/. 0</td>
+                            </tr>
+
+                            <tr>
+                                <td>Tu Porcentaje de Crecimiento :</td>
+                                <td>(3/6)x100 =50.0 %</td>
+                            </tr>
+
+                            <tr>
+                                <td>Tu Bonificacion Plus:</td>
+                                <td>S/. 0 x -3 CLT = S/.
+                                    0</td>
+                            </tr>
+
+                            <tr style="background-color:  rgba(189, 232, 89, 0.5);">
+                                <td><strong>Bono Total Clientes:</strong></td>
+                                <td><strong> S/. 0 + S/. 0 = S/.
+                                        0</strong></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+
+                <div id="bono-4">
+                    <h5 class="center-align">Detalles del Bono Retencion</h5>
+                    <table class="striped">
+                        <thead>
+                            <tr>
+                                <th>Descripción</th>
+                                <th>Monto</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Tu Cartera de clientes es de </td>
+                                <td> 7 CLT</td>
+                            </tr>
+                            <tr>
+                                <td>Tu Monto de Clientes retenidos de tu Cartera es :</td>
+                                <td> 1 CLT</td>
+                            </tr>
+                            <tr>
+                                <td>Tu Porcentaje de Retencion que te Corresponde es de :</td>
+                                <td>( 1 CLT / 7 CLT ) x 100=
+                                    14.29 %</td>
+                            </tr>
+                            <tr>
+                                <td>Tu porcentaje debe de estar en este rango :</td>
+                                <td>Rango : nan</td>
+                            </tr>
+
+                            <tr>
+                                <td>Segun tu Porcentaje y tu Categoria te Corresponde de Bono:</td>
+                                <td>S/. 0.00</td>
+                            </tr>
+
+                            <tr>
+                                <td>Tu Cartera de Clientes CAV es :</td>
+                                <td> 1.0 CLT</td>
+                            </tr>
+                            <tr>
+                                <td>Tu Cantidad de Clientes CAV Retenidos son:</td>
+                                <td> 0.0 CLT</td>
+                            </tr>
+
+                            <tr>
+                                <td>Tu porcentaje CAV:</td>
+                                <!-- <td>(0.0 CLT / 1.0 CLT) x 100%  =  0.0 %</td> -->
+                                <td>
+                                    <div class="equation-container">
+                                        <span class="equation">
+                                            (0.0 CLT / 1.0 CLT) x 100% =
+                                            0.0%
+                                        </span>
+                                    </div>
+
+
+                                </td>
+                            </tr>
+
+
+
+
+
+
+
+                            <tr style="background-color:  rgba(189, 232, 89, 0.5);">
+                                <td><strong>Tu Bono por Cumplimiento de retencion es :</strong></td>
+                                <td><strong>S/. 0.0</strong></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <div id="bono-5">
+                    <h5 class="center-align">Detalles del Bono Cartera al Dia</h5>
+                    <table class="striped">
+                        <thead>
+                            <tr>
+                                <th>Descripción</th>
+                                <th>Monto</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Saldo Capital de Tu Cartera:</td>
+                                <td>S/. 1,226,166.11 </td>
+                            </tr>
+                            <tr>
+                                <td>Cuotas Canceladas al dia de tu Cartera:</td>
+                                <td>S/. 919521.64</td>
+                            </tr>
+                            <tr>
+                                <td>Tu Porcentaje de Retencion que te Corresponde es de :</td>
+                                <td>Porcentaje= S/. 919521.64 / S/.
+                                    1,226,166.11 x 100% = 74.99%</td>
+                            </tr>
+
+                            <tr>
+                                <td>El Rango donde se encuentra tu porcentaje 74.99% <span
+                                        class="comment"
+                                        style="font-size:small ;color: black ;background-color: red;">Es
+                                        este : [ -inf ,92]
+                                    </span></td>
+                                <td>Sugerencia:necesitas que te cancelen mas cuotas </td>
+                            </tr>
+
+
+                            <tr style="background-color:  rgba(189, 232, 89, 0.5);">
+                                <td><strong>Bonificacion de Cartera al dia que te corresponde :</strong></td>
+                                <td><strong> S/. 0</strong></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+
+
+
+
+
+
+
+            </div>
+        </div>
+
+        <!-- Div para el semáforo y las indicaciones -->
+        <div>
+            <p>
+                <strong>*....Notas:</strong> <br>
+                - Si % ≤ 101%, rojo, nada.<br>
+                - Si 101% ≤ % ≤ 200%, amarillo, 50% excedente.<br>
+                - Si % > 200%, verde, 85% excedente.
+            </p>
+        </div>
+
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            var tabs = document.querySelectorAll('.tabs');
+            var instances = M.Tabs.init(tabs);
+        });
+    </script>
+</body>
+
+</html>
